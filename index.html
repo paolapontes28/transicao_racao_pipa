@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transição de Ração da Pipi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .progress-bar-container {
+            display: flex;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .progress-bar-new {
+            background-color: #f1c7d4; 
+            transition: width 0.5s ease-in-out;
+        }
+        .progress-bar-old {
+            background-color: #c1d3ea; 
+            transition: width 0.5s ease-in-out;
+        }
+        .cat-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+        
+        <header class="text-center mb-8">
+            <div class="flex justify-center items-center gap-4">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-700">Transição de Ração da Pipi</h1>
+            </div>
+            <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                Mudança de ração tranquila e segura para Pipi.
+            </p>
+        </header>
+
+        
+        <div class="flex justify-center items-center gap-6 mb-8 p-4 bg-white rounded-lg shadow-sm">
+            <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-pink-200"></div>
+                <span class="font-medium">Ração Nova</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-blue-200"></div>
+                <span class="font-medium">Ração Antiga</span>
+            </div>
+        </div>
+
+        <!-- Plano de Transicao -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Dia 1-->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 1</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black-600"> 5% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 5%;"></div>
+                        <div class="progress-bar-old" style="width: 95%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs1" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs1" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e fezes"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 2 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 2</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black-600">10% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 10%;"></div>
+                        <div class="progress-bar-old" style="width: 90%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs2" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs2" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 3 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 3</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">15% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 15%;"></div>
+                        <div class="progress-bar-old" style="width: 85%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs3" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs3" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 4 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 4</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">20% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 20%";></div>
+                        <div class="progress-bar-old" style="width: 80%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs4" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs4" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes"></textarea>    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 5 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 5</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">25% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 25%";></div>
+                        <div class="progress-bar-old" style="width: 75%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs4" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs4" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes"></textarea>    
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Dia 6 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 6</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">30% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 30%";></div>
+                        <div class="progress-bar-old" style="width: 70%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs4" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs4" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes"></textarea>    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 4 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 7</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">40% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 40%";></div>
+                        <div class="progress-bar-old" style="width: 60%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs4" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs4" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes"></textarea>    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dia 8 -->
+            <div class="card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-pink-400">Dia 8</h2>
+                    <input type="checkbox" class="h-6 w-6 rounded-md border-gray-300 text-teal-500 focus:ring-teal-400">
+                </div>
+                <div class="space-y-3">
+                    <p class="font-semibold text-black">50% Ração nova</p>
+                    <div class="progress-bar-container bg-gray-200">
+                        <div class="progress-bar-new" style="width: 50%";></div>
+                        <div class="progress-bar-old" style="width: 50%;"></div>
+                    </div>
+                    <div>
+                        <label for="obs4" class="font-semibold text-gray-600">Observações:</label>
+                        <textarea id="obs4" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-400 focus:ring focus:ring-teal-300 focus:ring-opacity-50" placeholder="Apetite e Fezes"></textarea>    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        
+        <footer class="text-center mt-10 text-gray-400 text-sm">
+            <p>Feito com ❤️ para Pipa</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
